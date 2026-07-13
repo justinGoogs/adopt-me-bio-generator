@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Adopt-Me Bio Generator — Styles
+   Palette: warm white #FAF8F5 | text #33302B | sage #6B9080 | amber #B8860B
+   ========================================================================== */
+
+
+/* ------------------------------------------------------------------
+   1. Global base & reset
+   ------------------------------------------------------------------ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    background-color: #FAF8F5;
+    color: #33302B;
+}
+
+
+/* ------------------------------------------------------------------
+   2. Layout — form & sections
+   ------------------------------------------------------------------ */
+form {
+    max-width: 43.75rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+fieldset {
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    border: 1px solid #e5e0d8;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #6B9080;
+    margin-bottom: 1rem;
+}
+
+
+/* ------------------------------------------------------------------
+   3. Fields — labels & inputs
+   ------------------------------------------------------------------ */
+.form-field {
+    margin-bottom: 1rem;
+}
+
+label,
+.field-label {
+    display: block;
+    margin: 0.3rem;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 5rem;
+}
+
+
+/* ------------------------------------------------------------------
+   4. Radio groups
+   ------------------------------------------------------------------ */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-group .field-label {
+    flex-basis: 100%;
+    /* heading takes the whole first line */
+    margin: 0 0 0.25rem 0;
+}
+
+.radio-group label {
+    display: inline;
+    margin: 0;
+}
+
+.radio-group input[type="text"] {
+    width: auto;
+    flex: 1;
+    min-width: 8rem;
+}
+
+input[type="radio"] {
+    accent-color: #6B9080;
+}
+
+
+/* ------------------------------------------------------------------
+   5. Disclosure flags (safety-critical fields)
+   ------------------------------------------------------------------ */
+.disclosure-flag {
+    display: inline-block;
+    background-color: #B8860B;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.25rem;
+    margin: 5px;
+}
+
+.disclosure-field {
+    border-left: 4px solid #B8860B;
+    padding-left: 0.75rem;
+}
+
+
+/* ------------------------------------------------------------------
+   6. Interaction states
+   ------------------------------------------------------------------ */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #6B9080;
+    outline-offset: 1px;
+    border-color: #6B9080;
+}

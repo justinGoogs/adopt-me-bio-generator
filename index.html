@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adopt Me Bio Generator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <form>
         <fieldset>
-            <legend>Identity &amp; Basics</legend>
+            <h2 class="section-title">Identity &amp; Basics</h2>
 
             <!-- Name -->
             <div class="form-field">
@@ -20,7 +23,7 @@
             </div>
 
             <!-- Species -->
-            <div class="form-field">
+            <div class="form-field radio-group">
                 <span class="field-label">Species: </span>
 
                 <input type="radio" id="species-dog" name="species" value="Dog">
@@ -47,7 +50,7 @@
             </div>
 
             <!--Sex-->
-            <div class="form-field">
+            <div class="form-field radio-group">
                 <span class="field-label">Sex: </span>
 
                 <input type="radio" id="sex-male" name="sex" value="Male">
@@ -64,7 +67,7 @@
             </div>
 
             <!-- Spayed / Neutered -->
-            <div class="form-field">
+            <div class="form-field radio-group">
                 <span class="field-label">Spayed / Neutered: </span>
 
                 <input type="radio" id="spayed-neutered-yes" name="spayedNeutered" value="Yes">
@@ -77,7 +80,7 @@
                 <label for="spayed-neutered-unknown">Unknown</label>
             </div>
             <!--Microchip-->
-            <div class="form-field">
+            <div class="form-field radio-group">
                 <span class="field-label">Microchip: </span>
 
                 <input type="radio" id="microchip-yes" name="microchip" value="Yes">
@@ -91,10 +94,10 @@
             </div>
         </fieldset>
         <fieldset>
-            <legend>Health &amp; Medical</legend>
+            <h2 class="section-title">Health &amp; Medical</h2>
 
             <!-- Vaccinations -->
-            <div class="form-field">
+            <div class="form-field radio-group">
                 <span class="field-label">Vaccinations: </span>
 
                 <input type="radio" id="vaccinations-current" name="vaccinations" value="Up to date">
@@ -108,7 +111,7 @@
             </div>
 
             <!-- Known Medical Conditions -->
-            <div class="form-field">
+            <div class="form-field disclosure-field">
                 <label for="medical-conditions">Known Medical Conditions: </label>
                 <span class="disclosure-flag">Always included in bio</span>
                 <textarea id="medical-conditions" name="medicalConditions"
@@ -116,7 +119,7 @@
             </div>
 
             <!-- Medications / Ongoing Care -->
-            <div class="form-field">
+            <div class="form-field disclosure-field">
                 <label for="medical-care">Medications / Ongoing care: </label>
                 <span class="disclosure-flag">Always included in bio</span>
                 <textarea id="medical-care" name="medicalCare"
@@ -138,9 +141,9 @@
             </div>
         </fieldset>
         <fieldset>
-            <legend>Behavior &amp; Compatibility</legend>
+            <h2 class="section-title">Behavior &amp; Compatibility</h2>
             <!--Good with dogs--->
-            <div class="form-field">
+            <div class="form-field radio-group">
                 <span class="field-label">Good with dogs: </span>
 
                 <input type="radio" id="good-with-dogs-yes" name="goodWithDogs" value="Yes - observed">
@@ -154,7 +157,7 @@
             </div>
 
             <!--Good with cats--->
-            <div class="form-field">
+            <div class="form-field radio-group">
                 <span class="field-label">Good with cats: </span>
 
                 <input type="radio" id="good-with-cats-yes" name="goodWithCats" value="Yes - observed">
@@ -168,7 +171,7 @@
             </div>
 
             <!--Good with kids--->
-            <div class="form-field">
+            <div class="form-field radio-group">
                 <span class="field-label">Good with kids: </span>
 
                 <input type="radio" id="good-with-kids-yes" name="goodWithKids" value="Yes - observed">
@@ -182,7 +185,7 @@
             </div>
 
             <!-- Compatible with strangers / handling -->
-            <div class="form-field">
+            <div class="form-field radio-group">
                 <span class="field-label">Compatible with strangers / handling: </span>
 
                 <input type="radio" id="compatible-with-strangers-yes" name="compatibleWithStrangers"
@@ -211,7 +214,7 @@
             </div>
 
             <!-- House / litter trained-->
-            <div class="form-field">
+            <div class="form-field radio-group">
                 <span class="field-label">House / litter trained: </span>
 
                 <input type="radio" id="house-trained-yes" name="houseTrained" value="Yes">
@@ -228,7 +231,7 @@
             </div>
 
             <!-- Known fears & triggers -->
-            <div class="form-field">
+            <div class="form-field disclosure-field">
                 <label for="fears-triggers">Known fears &amp; triggers: </label>
                 <span class="disclosure-flag">Always included in bio</span>
                 <textarea id="fears-triggers" name="fearsTriggers"
@@ -236,7 +239,7 @@
             </div>
 
             <!--Resource guarding -->
-            <div class="form-field">
+            <div class="form-field disclosure-field">
                 <label for="resource-guarding">Resource guarding: </label>
                 <span class="disclosure-flag">Always included in bio</span>
                 <textarea id="resource-guarding" name="resourceGuarding"
@@ -244,7 +247,7 @@
             </div>
 
             <!--Bite / Aggression history-->
-            <div class="form-field">
+            <div class="form-field disclosure-field">
                 <label for="bite-aggression-history">Bite / Aggression history: </label>
                 <span class="disclosure-flag">Always included in bio</span>
                 <textarea id="bite-aggression-history" name="biteAggressionHistory"
@@ -253,7 +256,7 @@
         </fieldset>
 
         <fieldset>
-            <legend>Personality &amp; Flavor</legend>
+            <h2 class="section-title">Personality &amp; Flavor</h2>
 
             <!--Favorite activities-->
             <div class="form-field">
@@ -285,7 +288,7 @@
         </fieldset>
 
         <fieldset>
-            <legend>Backstory</legend>
+            <h2 class="section-title">Backstory</h2>
 
             <!--How they came to the shelter-->
             <div class="form-field">
@@ -309,7 +312,7 @@
         </fieldset>
 
         <fieldset>
-            <legend>Ideal Home &amp; Matching</legend>
+            <h2 class="section-title">Ideal Home &amp; Matching</h2>
 
             <!-- Ideal home environment-->
             <div class="form-field">
@@ -327,7 +330,7 @@
         </fieldset>
 
         <fieldset>
-            <legend>Logistics</legend>
+            <h2 class="section-title">Logistics</h2>
 
             <!-- Adoption fee -->
             <div class="form-field">
