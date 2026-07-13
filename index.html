@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Me Bio Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Identity &amp; Basics</legend>
+
+            <!-- Name -->
+            <div class="form-field">
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="petName" placeholder="Name">
+            </div>
+
+            <!-- Species -->
+            <div class="form-field">
+                <span class="field-label">Species: </span>
+
+                <input type="radio" id="species-dog" name="species" value="Dog">
+                <label for="species-dog">Dog</label>
+
+                <input type="radio" id="species-cat" name="species" value="Cat">
+                <label for="species-cat">Cat</label>
+
+                <input type="radio" id="species-other" name="species" value="Other">
+                <label for="species-other">Other</label>
+
+                <label for="other-species-detail">If other, please specify: </label>
+                <input type="text" id="other-species-detail" name="otherSpecies" placeholder="Please specify">
+            </div>
+            <!-- Breed -->
+            <div class="form-field">
+                <label for="breed">Breed: </label>
+                <input type="text" id="breed" name="breed" placeholder="best guess — mixed is fine">
+            </div>
+            <!-- Age -->
+            <div class="form-field">
+                <label for="age">Age: </label>
+                <input type="text" id="age" name="age" placeholder="Age (years or months)">
+            </div>
+
+            <!--Sex-->
+            <div class="form-field">
+                <span class="field-label">Sex: </span>
+
+                <input type="radio" id="sex-male" name="sex" value="Male">
+                <label for="sex-male">Male</label>
+
+                <input type="radio" id="sex-female" name="sex" value="Female">
+                <label for="sex-female">Female</label>
+            </div>
+
+            <!-- Size / Weight -->
+            <div class="form-field">
+                <label for="size">Size / Weight: </label>
+                <input type="text" id="size" name="size" placeholder="Size / Weight">
+            </div>
+
+            <!-- Spayed / Neutered -->
+            <div class="form-field">
+                <span class="field-label">Spayed / Neutered: </span>
+
+                <input type="radio" id="spayed-neutered-yes" name="spayedNeutered" value="Yes">
+                <label for="spayed-neutered-yes">Yes</label>
+
+                <input type="radio" id="spayed-neutered-no" name="spayedNeutered" value="No">
+                <label for="spayed-neutered-no">No</label>
+
+                <input type="radio" id="spayed-neutered-unknown" name="spayedNeutered" value="Unknown">
+                <label for="spayed-neutered-unknown">Unknown</label>
+            </div>
+            <!--Microchip-->
+            <div class="form-field">
+                <span class="field-label">Microchip: </span>
+
+                <input type="radio" id="microchip-yes" name="microchip" value="Yes">
+                <label for="microchip-yes">Yes</label>
+
+                <input type="radio" id="microchip-no" name="microchip" value="No">
+                <label for="microchip-no">No</label>
+
+                <input type="radio" id="microchip-unknown" name="microchip" value="Unknown">
+                <label for="microchip-unknown">Unknown</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Health &amp; Medical</legend>
+
+            <!-- Vaccinations -->
+            <div class="form-field">
+                <span class="field-label">Vaccinations: </span>
+
+                <input type="radio" id="vaccinations-current" name="vaccinations" value="Up to date">
+                <label for="vaccinations-current">Up to date</label>
+
+                <input type="radio" id="vaccinations-progress" name="vaccinations" value="In progress">
+                <label for="vaccinations-progress">In progress</label>
+
+                <input type="radio" id="vaccinations-unknown" name="vaccinations" value="Unknown">
+                <label for="vaccinations-unknown">Unknown</label>
+            </div>
+
+            <!-- Known Medical Conditions -->
+            <div class="form-field">
+                <label for="medical-conditions">Known Medical Conditions: </label>
+                <span class="disclosure-flag">Always included in bio</span>
+                <textarea id="medical-conditions" name="medicalConditions"
+                    placeholder="Please describe any known medical conditions"></textarea>
+            </div>
+
+            <!-- Medications / Ongoing Care -->
+            <div class="form-field">
+                <label for="medical-care">Medications / Ongoing care: </label>
+                <span class="disclosure-flag">Always included in bio</span>
+                <textarea id="medical-care" name="medicalCare"
+                    placeholder="Please describe any medications or ongoing care needs"></textarea>
+            </div>
+
+            <!-- Special Diet -->
+            <div class="form-field">
+                <label for="special-diet">Special Diet: </label>
+                <input type="text" id="special-diet" name="specialDiet"
+                    placeholder="Please describe any special dietary needs">
+            </div>
+
+            <!-- Species-Specific Tests -->
+            <div class="form-field">
+                <label for="species-tests">Species-Specific Tests: </label>
+                <input type="text" id="species-tests" name="speciesTests"
+                    placeholder="Please describe any species-specific tests (e.g., FIV/FeLV for cats)">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Behavior &amp; Compatibility</legend>
+            <!--Good with dogs--->
+            <div class="form-field">
+                <span class="field-label">Good with dogs: </span>
+
+                <input type="radio" id="good-with-dogs-yes" name="goodWithDogs" value="Yes - observed">
+                <label for="good-with-dogs-yes">Yes - observed</label>
+
+                <input type="radio" id="good-with-dogs-no" name="goodWithDogs" value="No - observed">
+                <label for="good-with-dogs-no">No - observed</label>
+
+                <input type="radio" id="good-with-dogs-untested" name="goodWithDogs" value="Not yet tested">
+                <label for="good-with-dogs-untested">Not yet tested</label>
+            </div>
+
+            <!--Good with cats--->
+            <div class="form-field">
+                <span class="field-label">Good with cats: </span>
+
+                <input type="radio" id="good-with-cats-yes" name="goodWithCats" value="Yes - observed">
+                <label for="good-with-cats-yes">Yes - observed</label>
+
+                <input type="radio" id="good-with-cats-no" name="goodWithCats" value="No - observed">
+                <label for="good-with-cats-no">No - observed</label>
+
+                <input type="radio" id="good-with-cats-untested" name="goodWithCats" value="Not yet tested">
+                <label for="good-with-cats-untested">Not yet tested</label>
+            </div>
+
+            <!--Good with kids--->
+            <div class="form-field">
+                <span class="field-label">Good with kids: </span>
+
+                <input type="radio" id="good-with-kids-yes" name="goodWithKids" value="Yes - observed">
+                <label for="good-with-kids-yes">Yes - observed</label>
+
+                <input type="radio" id="good-with-kids-no" name="goodWithKids" value="No - observed">
+                <label for="good-with-kids-no">No - observed</label>
+
+                <input type="radio" id="good-with-kids-untested" name="goodWithKids" value="Not yet tested">
+                <label for="good-with-kids-untested">Not yet tested</label>
+            </div>
+
+            <!-- Compatible with strangers / handling -->
+            <div class="form-field">
+                <span class="field-label">Compatible with strangers / handling: </span>
+
+                <input type="radio" id="compatible-with-strangers-yes" name="compatibleWithStrangers"
+                    value="Yes - observed">
+                <label for="compatible-with-strangers-yes">Yes - observed</label>
+
+                <input type="radio" id="compatible-with-strangers-no" name="compatibleWithStrangers"
+                    value="No - observed">
+                <label for="compatible-with-strangers-no">No - observed</label>
+
+                <input type="radio" id="compatible-with-strangers-untested" name="compatibleWithStrangers"
+                    value="Not yet tested">
+                <label for="compatible-with-strangers-untested">Not yet tested</label>
+            </div>
+
+            <!-- Energy Level -->
+            <div class="form-field">
+                <label for="energy-level">Energy Level: </label>
+
+                <select id="energy-level" name="energyLevel">
+                    <option value="">Select Energy Level</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+
+            <!-- House / litter trained-->
+            <div class="form-field">
+                <span class="field-label">House / litter trained: </span>
+
+                <input type="radio" id="house-trained-yes" name="houseTrained" value="Yes">
+                <label for="house-trained-yes">Yes</label>
+
+                <input type="radio" id="house-trained-no" name="houseTrained" value="No">
+                <label for="house-trained-no">No</label>
+
+                <input type="radio" id="house-trained-partially" name="houseTrained" value="Partially">
+                <label for="house-trained-partially">Partially</label>
+
+                <input type="radio" id="house-trained-unknown" name="houseTrained" value="Unknown">
+                <label for="house-trained-unknown">Unknown</label>
+            </div>
+
+            <!-- Known fears & triggers -->
+            <div class="form-field">
+                <label for="fears-triggers">Known fears &amp; triggers: </label>
+                <span class="disclosure-flag">Always included in bio</span>
+                <textarea id="fears-triggers" name="fearsTriggers"
+                    placeholder="Please describe any known fears or triggers"></textarea>
+            </div>
+
+            <!--Resource guarding -->
+            <div class="form-field">
+                <label for="resource-guarding">Resource guarding: </label>
+                <span class="disclosure-flag">Always included in bio</span>
+                <textarea id="resource-guarding" name="resourceGuarding"
+                    placeholder="Please describe any known resource guarding behaviors"></textarea>
+            </div>
+
+            <!--Bite / Aggression history-->
+            <div class="form-field">
+                <label for="bite-aggression-history">Bite / Aggression history: </label>
+                <span class="disclosure-flag">Always included in bio</span>
+                <textarea id="bite-aggression-history" name="biteAggressionHistory"
+                    placeholder="Please describe any known bite or aggression incidents"></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personality &amp; Flavor</legend>
+
+            <!--Favorite activities-->
+            <div class="form-field">
+                <label for="favorite-activities">Favorite activities: </label>
+                <textarea id="favorite-activities" name="favoriteActivities"
+                    placeholder="e.g. fetch in the yard, chasing laser dots, long sniffy walks, napping in sunny windows"></textarea>
+            </div>
+
+            <!--Quirks / funny habits-->
+            <div class="form-field">
+                <label for="quirks-habits">Quirks / funny habits: </label>
+                <textarea id="quirks-habits" name="quirksHabits"
+                    placeholder="e.g. howls at the mailman, knocks pens off tables, steals socks, burrows under blankets"></textarea>
+            </div>
+
+            <!--Nicknames-->
+            <div class="form-field">
+                <label for="nicknames">Nicknames: </label>
+                <input type="text" id="nicknames" name="nicknames"
+                    placeholder="e.g. Bubba, Miss Priss, Sir Purrs-a-Lot, The Velcro Pup">
+            </div>
+
+            <!--What makes them light up-->
+            <div class="form-field">
+                <label for="light-up">What makes them light up: </label>
+                <textarea id="light-up" name="lightUp"
+                    placeholder="e.g. squeaky toys, the treat jar opening, a warm lap, belly rubs"></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Backstory</legend>
+
+            <!--How they came to the shelter-->
+            <div class="form-field">
+                <label for="backstory">How they came to the shelter (if known): </label>
+                <textarea id="backstory" name="backstory"
+                    placeholder="e.g. found as a stray, owner surrender"></textarea>
+            </div>
+
+            <!--Time in care-->
+            <div class="form-field">
+                <label for="time-in-care">Time in care: </label>
+                <input type="text" id="time-in-care" name="timeInCare" placeholder="e.g. 2 weeks, 3 months, 1 year">
+            </div>
+
+            <!--Notable progress or transformation-->
+            <div class="form-field">
+                <label for="transformation-progress">Notable progress or transformation (if known): </label>
+                <textarea id="transformation-progress" name="transformationProgress"
+                    placeholder="e.g. blossomed from shy to confident, learned to trust after slow socialization"></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ideal Home &amp; Matching</legend>
+
+            <!-- Ideal home environment-->
+            <div class="form-field">
+                <label for="ideal-home">Ideal home environment: </label>
+                <textarea id="ideal-home" name="idealHome"
+                    placeholder="e.g. calm household, someone home during the day, a yard to explore"></textarea>
+            </div>
+
+            <!--Post-adoption support offered-->
+            <div class="form-field">
+                <label for="post-adoption-support">Post-adoption support offered: </label>
+                <textarea id="post-adoption-support" name="postAdoptionSupport"
+                    placeholder="e.g. free follow-up vet visit, training discount, lifetime behavior support"></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Logistics</legend>
+
+            <!-- Adoption fee -->
+            <div class="form-field">
+                <label for="adoption-fee">Adoption fee: </label>
+                <input type="text" id="adoption-fee" name="adoptionFee" placeholder="e.g. $150, $200">
+            </div>
+
+            <!--Location-->
+            <div class="form-field">
+                <label for="location">Location: </label>
+                <input type="text" id="location" name="location" placeholder="e.g. Downtown, Uptown, Suburbs">
+            </div>
+
+            <!--What's included-->
+            <div class="form-field">
+                <label for="what-included">What's included: </label>
+                <textarea id="what-included" name="whatIncluded"
+                    placeholder="e.g. spay/neuter, up-to-date vaccinations, microchip, starter food bag"></textarea>
+            </div>
+
+            <!--Call to action / contact-->
+            <div class="form-field">
+                <label for="call-to-action">Call to action / contact: </label>
+                <input type="text" id="call-to-action" name="callToAction"
+                    placeholder="e.g. Call (555) 123-4567 or visit us at Main St Shelter to meet me!">
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

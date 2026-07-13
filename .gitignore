@@ -1,0 +1,8 @@
+# secrets — never commit these
+.env
+
+# OS junk
+.DS_Store
+
+# editor
+.vscode/
