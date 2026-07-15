@@ -1,7 +1,7 @@
 const generateBtn = document.getElementById('generate-btn');
 const bioOutput = document.getElementById('bio-output');
 
-generateBtn.addEventListener('click', () => {
+generateBtn.addEventListener('click', async () => {
     const form = document.querySelector('form');
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
@@ -30,7 +30,21 @@ generateBtn.addEventListener('click', () => {
             return;
         }
     }
-    // --- gate ends; generation will go here later --- 
+    // --- generation ---
+    bioOutput.textContent = "Generating…";
+
+    try {
+        const res = await fetch("/api/generate", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+        bioOutput.textContent = result.bio;
+    } catch (error) {
+        bioOutput.textContent = "Something went wrong. Please try again.";
+    }
 
 });
 
