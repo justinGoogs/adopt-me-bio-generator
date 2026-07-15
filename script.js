@@ -42,6 +42,8 @@ generateBtn.addEventListener('click', async () => {
 
         const result = await res.json();
         bioOutput.textContent = result.bio;
+        bioOutput.style.display = "block";
+        bioOutput.scrollIntoView({ behavior: "smooth" });
     } catch (error) {
         bioOutput.textContent = "Something went wrong. Please try again.";
     }

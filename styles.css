@@ -137,3 +137,34 @@ select:focus {
     outline-offset: 1px;
     border-color: #6B9080;
 }
+
+/* ------------------------------------------------------------------
+   7. Generate button & output
+   ------------------------------------------------------------------ */
+#generate-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #6B9080;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#generate-btn:hover {
+    background-color: #5a7a6b;
+}
+
+#bio-output {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #e5e0d8;
+    border-radius: 0.5rem;
+    line-height: 1.6;
+    display: none; /* Hidden by default, shown when bio is generated */
+}
