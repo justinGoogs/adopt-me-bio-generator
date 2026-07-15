@@ -9,14 +9,14 @@ generateBtn.addEventListener('click', () => {
     console.log(data);
 
     // --- soft-gate: everything from here ---
-    const safteyFields = [
+    const safetyFields = [
         { key: 'goodWithDogs', label: 'whether they\'re good with dogs' },
         { key: 'goodWithCats', label: 'whether they\'re good with cats' },
         { key: 'goodWithKids', label: 'whether they\'re good with children' },
         { key: 'compatibleWithStrangers', label: 'how they are with strangers/handling' },
     ];
     const missing = [];
-    for (const field of safteyFields) {
+    for (const field of safetyFields) {
         if (!data[field.key]) {
             missing.push(field.label);
         }
