@@ -31,6 +31,7 @@ generateBtn.addEventListener('click', async () => {
         }
     }
     // --- generation ---
+    bioOutput.style.display = "block";
     bioOutput.textContent = "Generating…";
 
     try {
@@ -43,7 +44,6 @@ generateBtn.addEventListener('click', async () => {
         const result = await res.json();
         console.log("RESULT:", result);      // <-- add this line
         bioOutput.textContent = result.bio;
-        bioOutput.style.display = "block";
         bioOutput.scrollIntoView({ behavior: "smooth" });
     } catch (error) {
         bioOutput.textContent = "Something went wrong. Please try again.";
