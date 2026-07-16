@@ -34,8 +34,6 @@ How it is built
 
 The front end is plain HTML, CSS, and JavaScript with no framework. I wanted to understand every piece rather than lean on something that hides the details.
 
-The bio is written by Claude through Anthropic's API. Because an API key is a secret, and anything in front end code is visible to the public, the app does not call the API directly from the browser. It sends the form data to a small serverless function on Vercel, and that function holds the key and makes the call. The key lives in an environment variable on the server and never touches the browser or the code in the repo. Learning why that separation is necessary, and setting it up correctly, was one of the more useful things I took away from this.
-
 What I learned building it
 
 I came into this rebuilding my front end skills after being away from code for a while, so a good part of it was working muscles that had gone quiet. A few things stuck with me.
